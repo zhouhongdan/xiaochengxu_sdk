@@ -1,0 +1,26 @@
+<image class="bg {{step==0?'lock':''}}" mode="widthFix" src="./assets/bg.jpg"></image>
+<view class="tip scaleE"></view>
+<view class="mask" wx:if="{{step==0||step==2}}"></view>
+<view class="dialog" wx:if="{{step==0}}">
+    <image mode="widthFix" src="../index/assets/pop0.png"></image>
+    <div class="dialog-content pop0">
+        <view class="t01"></view>
+        <view class="t02">免费获取每日投资建议</view>
+        <button bindgetuserinfo="onGetUserInfo" class="btn b0" openType="getUserInfo">授权领取</button>
+    </div>
+</view>
+<button bindgetphonenumber="onGetPhoneNumber" class="bottom" openType="getPhoneNumber" wx:elif="{{step==1}}">
+    <image mode="widthFix" src="../index/assets/btn.png"></image>
+    <view class="t22">点击关注【财富1+1】</view>
+</button>
+<view class="dialog" wx:elif="{{step==2}}">
+    <image mode="widthFix" src="../index/assets/pop1.png"></image>
+    <view class="dialog-content pop1">
+        <view class="t11" wx:if="{{first}}">恭喜您订阅成功!</view>
+        <view class="t11" wx:else>您有今日投资建议待领取!</view>
+        <button bindcontact="onContact" class="btn b1" openType="contact">
+      回复“6”
+      <text>立即领取</text>
+        </button>
+    </view>
+</view>

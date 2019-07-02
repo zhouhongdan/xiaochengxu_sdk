@@ -1,14 +1,11 @@
 {
     "pages": [
-        "pages/index/index",
-        "pages/longtou/index",
-        "pages/home/index",
-        "pages/traders/index"
+        "pages/index/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "财富1+1助手",
+        "navigationBarTitleText": "sdk参考",
         "navigationBarTextStyle": "black"
     }
 }
